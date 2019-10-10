@@ -1,0 +1,4 @@
+Directives:
+a) v-bind: Binds HTML elements to the Vue Instance.
+b) v-once: renders the contents once only.
+c) v-html: It tells VueJS to render the text provided as a html tag instead of text
