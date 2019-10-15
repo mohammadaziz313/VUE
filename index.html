@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>VUE Tutorial</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--link rel='stylesheet' type='text/css' media='screen' href='main.css'-->
     <script src="vue.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <a v-bind:href="link" target="_blank">Hey</a>
-        <input type="text" v-on:input="changeTitle">
-        {{ title }}
-        <hr>
-        <p v-html="finishedLink"></p>
-        <hr>
-        <button v-on:click="increase">Increase</button>
-        <p>{{counter}}</p>
-        <hr>
-        <p v-on:mousemove></p>
+      <a v-bind:href="link" target="_blank">Hey</a>
+      <input type="text" v-on:input="changeTitle" />
+      {{ title }}
+      <hr />
+      <p v-html="finishedLink"></p>
+      <hr />
+      <button v-on:click="increase">Increase</button>
+      <p>{{ counter }}</p>
+      <hr />
+      <p v-on:mousemove="updateCoordinates">
+        {{ x }} / {{ y }}
+        <span v-on:mousemove="dummy">No CHANGES</span>
+      </p>
+      <input type="text" v-on:keyup.enter="alert" />
+      <hr />
+      <input type="text" v-model="name" />
+      <p>{{ name }}</p>
     </div>
-</body>
+    <hr />
+    <div id="app2">
+      <button v-on:click="counter++">Increase</button>
+      <button v-on:click="counter--">Decrease</button>
+      <p>{{ result() }} / {{ output }}</p>
+      <p>{{ counter }}</p>
+    </div>
+  </body>
 
-<footer>
+  <footer>
     <script src="main.js"></script>
-</footer>
+  </footer>
 </html>

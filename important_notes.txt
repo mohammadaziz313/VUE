@@ -2,3 +2,20 @@ Directives:
 a) v-bind: Binds HTML elements to the Vue Instance.
 b) v-once: renders the contents once only.
 c) v-html: It tells VueJS to render the text provided as a html tag instead of text
+
+Event Modifiers:
+a) v-on:mousemove.stop : This will stop the propagation of the events.
+
+Two-way data binding:
+v-model: We use this directive for two way data binding.
+
+Using Computed properties:
+Computed properties are important since it doesn't re-render the contents if the property dependent on
+on the function doesn't change. We should always use this instead of methods.
+
+Using watch property:
+We use this in case of asynchronous tasks. These are always applied on data properties. It is a good practice
+to always use Computed properties.
+
+v-on -> @
+v-bind -> :
