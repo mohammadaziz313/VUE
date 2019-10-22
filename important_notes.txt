@@ -19,3 +19,14 @@ to always use Computed properties.
 
 v-on -> @
 v-bind -> :
+
+We can dynamically style using :class property.
+
+v-bind:class requires an object. We bind the class to an object. However, this is not always the ideal case.
+In most cases, we provide it with a function that returns an object.
+
+v-if / v-else-if / v-else -> These directive work as if and else. They completely remove or add elements from the DOM.
+
+<template></template> -> This html tag allows us to group similar tags together.
+
+v-show : This allows us to keep the element in the DOM while hiding it from the DOM.

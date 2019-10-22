@@ -54,3 +54,34 @@ var app2 = new Vue({
     }
   }
 });
+
+var app3 = new Vue({
+  el: "#app3",
+  data: {
+    attachRed: false,
+    attachBlue: false,
+    color: "yellow"
+  },
+  computed: {
+    classSetter: function() {
+      return { blue: this.attachBlue };
+    }
+  },
+  watch: {},
+  methods: {}
+});
+
+var app4 = new Vue({
+  el: "#app4",
+  data: {
+    color: "yellow",
+    width: 100
+  },
+  computed: {
+    myStyle: function() {
+      return { backgroundColor: this.color, width: this.width + "px" };
+    }
+  },
+  methods: {},
+  watch: {}
+});
