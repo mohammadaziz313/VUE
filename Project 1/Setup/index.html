@@ -16,7 +16,9 @@
               class="healthbar text-center"
               style="background-color: green; margin: 0; color: white;"
               :style="getUserHealth"
-            ></div>
+            >
+              {{ userHealth }}
+            </div>
           </div>
         </div>
         <div class="small-6 columns">
@@ -26,7 +28,9 @@
               class="healthbar text-center"
               style="background-color: green; margin: 0; color: white;"
               :style="getMonsterHealth"
-            ></div>
+            >
+              {{ monsterHealth }}
+            </div>
           </div>
         </div>
       </section>
@@ -51,7 +55,7 @@
             <button id="heal" @click="heal">
               HEAL
             </button>
-            <button id="give-up" @click="changeGameStatus('end')">
+            <button id="give-up" @click="giveup">
               GIVE UP
             </button>
           </div>
