@@ -29,6 +29,10 @@ var app1 = new Vue({
   }
 });
 
+app1.$refs.increaseButton.innerText = "Hey";
+
+console.log(app1.$refs);
+
 var app2 = new Vue({
   el: "#app2",
   data: {
@@ -85,3 +89,12 @@ var app4 = new Vue({
   methods: {},
   watch: {}
 });
+
+var app5 = new Vue({
+  template: "<h3>App5 using template property</h3>"
+});
+
+//app5.$mount("#app5");
+
+app5.$mount();
+document.getElementById("app5").appendChild(app5.$el);

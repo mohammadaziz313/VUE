@@ -30,3 +30,36 @@ v-if / v-else-if / v-else -> These directive work as if and else. They completel
 <template></template> -> This html tag allows us to group similar tags together.
 
 v-show : This allows us to keep the element in the DOM while hiding it from the DOM.
+
+ref: Allows us to access any element in the DOM.
+--------------------------------
+Example: 
+<p ref="paragraph"></p>
+
+Access it: vm.$refs.paragraph.innerText = 'Hey'
+--------------------------------
+
+In case we do not know where and when to mount our vue instance. We may use the following method:
+-----------------------------------------------------------------
+var app1 = new Vue({
+    data:{}
+});
+
+app1.$mount('#app1'); // We place the id which we want to hook up. 
+-----------------------------------------------------------------
+
+We can also declare an empty div for example and populate it using VueJS.
+-----------------------------------------------------------------
+<div id="app3"></div>
+
+var app3 = new Vue({
+    template : '<h1>hey</h1>'
+});
+
+1)  app3.$mount('#app3');
+
+2)  app3.$mount();
+    document.getElementById("app3").appendChild(app3.$el);
+-----------------------------------------------------------------
+
+Components are way to reuse a particular template.

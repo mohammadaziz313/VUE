@@ -16,7 +16,7 @@
       <hr />
       <p v-html="finishedLink"></p>
       <hr />
-      <button v-on:click="increase">Increase</button>
+      <button v-on:click="increase" ref="increaseButton">Increase</button>
       <p>{{ counter }}</p>
       <hr />
       <p v-on:mousemove="updateCoordinates">
@@ -35,6 +35,8 @@
       <p>{{ result() }} / {{ output }}</p>
       <p>{{ counter }}</p>
     </div>
+
+    <div id="app5"></div>
   </body>
 
   <footer>
