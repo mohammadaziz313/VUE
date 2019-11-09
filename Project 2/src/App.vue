@@ -15,7 +15,14 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <app-footer></app-footer>
+        <app-quotes-viewer :quotesArray="passQuotesArray"></app-quotes-viewer>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <app-footer>
+          <p>Info: Click on a Quote to delete it.</p>
+        </app-footer>
       </div>
     </div>
   </div>
@@ -52,6 +59,9 @@ export default {
   computed: {
     counters() {
       return eventBus.counter;
+    },
+    passQuotesArray() {
+      return this.quotesArray;
     }
   }
 };

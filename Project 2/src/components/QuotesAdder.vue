@@ -2,7 +2,9 @@
   <div class="form-group">
     <label for="Quote">Quote</label>
     <textarea class="form-control" rows="5" v-model="textInput"></textarea>
-    <button type="button" class="btn btn-primary center" @click="addQuote">Add Quote</button>
+    <div style="text-align:center;">
+      <button type="button" class="btn btn-primary" @click="addQuote">Add Quote</button>
+    </div>
   </div>
 </template>
 
@@ -34,16 +36,8 @@ export default {
 </script>
 
 <style scoped>
-div,
+.form-group,
 button {
   margin: 20px;
-}
-
-.center {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -100px;
-  margin-left: -100px;
 }
 </style>
